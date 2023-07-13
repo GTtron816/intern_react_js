@@ -9,13 +9,14 @@ p();
 
 const p=()=>{
     document.getElementById("taskhead").hidden=false;
-    var chk=document.createElement("input")
+    var div=document.createElement("div");
+    div.id=list[0];
+    var chk=document.createElement("input");
     chk.type="checkbox"
-    chk.id="chk";
     chk.className="chk"
+    chk.value=list[0];
     var span=document.createElement("span");
     span.innerHTML=list[0];
-    span.id="span";
     span.className="label";
     var btn=document.createElement("button");
     btn.textContent="Remove";
@@ -25,18 +26,15 @@ const p=()=>{
         span.style.setProperty("text-decoration", "line-through");
     };
     btn.onclick=function(){
-        chk.remove();
-        span.remove();
-        btn.remove();
-        space.remove();
+      div.remove();
 
     };
 
     var parent=document.getElementById("tasks");
-    parent.appendChild(chk);
-    parent.appendChild(span);
-    parent.appendChild(btn);
-    parent.appendChild(space);
+    parent.appendChild(div);
+    div.appendChild(chk);
+    div.appendChild(span);
+    div.appendChild(btn);
     list.pop();
 }
 
