@@ -1,7 +1,7 @@
 var list=[];
 const a=function(){
-if(!document.getElementById("tb").value == ""){
-list.push(document.getElementById("tb").value);
+if(!document.getElementById("tb").value.trim() == ""){
+list.push(document.getElementById("tb").value.trim());
 document.getElementById("tb").value = "";
 p();
 }
