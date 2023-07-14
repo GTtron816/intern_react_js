@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -20,8 +21,26 @@
       <button class="btn" id="push" onclick="a()">Add</button>
     </div>
   </div>
+  <h1>Search</h1>
+  <div class="container">
+    <div id="search">
+      <input class="txt" type="text" onkeyup="search()" placeholder="Search Tasks" id="sc">
+    </div>
+  </div>
     <div><h1 id="taskhead" hidden>Tasks</h1></div>
     <div id="tasks"></div>
+
+<div>
+  <h4>Complete</h4>
+  <div class="w3-light-grey">
+    <div id="cm" class="w3-container w3-green w3-center" style="width:0%">0%</div>
+  </div><br>
+  <h4>Incomplete</h4>
+  <div class="w3-light-grey">
+    <div id="ic" class="w3-container w3-red w3-center" style="width:0%">0%</div>
+  </div><br>
+   </div>
+    
 </div>
 </body>
 
