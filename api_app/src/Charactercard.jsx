@@ -9,10 +9,8 @@ function charaDetails(e,id){
   e.preventDefault();
   navigate("/chara",{state : {id : id}})
 }
-    const character=props.character;
-return(
-   
-            
+const character=props.character;
+return(    
     <div  className="card" style={{width: 18+'rem'}}  key={character.id}
     onClick={(e)=> charaDetails(e,character.id)}
     >
