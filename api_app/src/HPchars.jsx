@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import Charactercard from './Charactercard';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 export default function HPchars() {
@@ -39,8 +39,8 @@ export default function HPchars() {
       </div>
       <div className="row row-cols-5"  >
       {filteredData.map((character) => (
-         <div className="col" style={{margin: 20+'px'}} >
-        <CharacterData key={character.id} character={character}/>
+         <div className="col" style={{margin: 20+'px'}} key={character.id} >
+        <Charactercard  character={character}/>
         </div>
   ))}
    </div>
